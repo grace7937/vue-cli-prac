@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p>{{ title }}</p>
     {{ name }}
   </div>
+    <p>{{ title }}</p>
   <button @click="updateName">Change Name</button>
 </template>
 
@@ -10,7 +10,17 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: {
+    title: {
+      type: String,
+      require: false,
+      default: 'basic',
+    },
+    age : {
+      type: String,
+      default: 'dasic name'
+    }
+  },
   data() {
     return {
       name: "apple",
