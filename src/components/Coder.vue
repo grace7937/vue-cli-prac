@@ -4,6 +4,7 @@
   </div>
     <p>{{ title }}</p>
   <button @click="updateName">Change Name</button>
+  <slot name="header"></slot>
 </template>
 
 
